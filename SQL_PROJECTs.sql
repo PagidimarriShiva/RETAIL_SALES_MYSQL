@@ -1,3 +1,4 @@
+create database sales;
 SELECT * FROM retail_sales;
 -- removing null values
 select * from retail_sales
@@ -15,7 +16,7 @@ or total_sale is null;
 -- find the unique customer_id from retail_sales??
 select count(distinct customer_id) from retail_sales;
 
--- find the unique transacations_id from retail_sales??
+-- **find the unique transacations_id from retail_sales??
 select count(distinct transactions_id) from retail_sales;
 -- Write a SQL query to retrieve all columns for sales made on '2022-11-05 ??
 select * from retail_sales
@@ -68,7 +69,6 @@ select category,count(distinct customer_id) from retail_sales
 group by category;
 
 -- Write a SQL query to create each shift and number of orders (Example Morning <=12, Afternoon Between 12 & 17, Evening >17)
- select * from retail_sales;
  select 
  case
  when sale_time<="12" then "morning"
@@ -81,14 +81,8 @@ group by category;
  when sale_time between 12 and 17 then"afternoon"
  else "evening" 
   end ;
+select * from retail_sales; 
   
-  
-  
-  
-  
- 
- 
- alter table retail_sales drop column shift;
  
 
  
